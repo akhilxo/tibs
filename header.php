@@ -12,8 +12,7 @@
   <header class="header" id="header">
     <div class="header__inner">
       <a href="/" class="header__logo">
-        <span class="header__logo-mark">T</span>
-        TIBS
+        <img src="/logo.jpg" alt="TIBS — The Investment Banking School" class="header__logo-img">
       </a>
       <nav class="header__nav" id="main-nav">
         <div class="header__nav-links">

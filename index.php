@@ -1,3 +1,25 @@
+<?php
+/**
+ * TIBS — Front Controller / Router
+ * 
+ * Herd (Nginx + Valet) routes all requests to index.php.
+ * This router dispatches clean URLs to the correct PHP page file.
+ */
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$uri = rtrim($uri, '/');
+
+$routes = [
+    '/about'    => __DIR__ . '/about.php',
+    '/programs' => __DIR__ . '/programs.php',
+    '/ibcp'     => __DIR__ . '/ibcp.php',
+    '/contact'  => __DIR__ . '/contact.php',
+];
+
+if (isset($routes[$uri])) {
+    require $routes[$uri];
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -329,7 +351,7 @@
           </div>
           <div class="cta-band__contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:theinvestmentbankingschool@gmail.com">theinvestmentbankingschool@gmail.com</a>
+            <a href="mailto:info@theinvestmentbankingschool.com">info@theinvestmentbankingschool.com</a>
           </div>
         </div>
       </div>

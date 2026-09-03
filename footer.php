@@ -23,7 +23,7 @@
           </div>
           <div class="footer__contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:theinvestmentbankingschool@gmail.com">theinvestmentbankingschool@gmail.com</a>
+            <a href="mailto:info@theinvestmentbankingschool.com">info@theinvestmentbankingschool.com</a>
           </div>
         </div>
         <div>
@@ -32,9 +32,28 @@
           <a href="/contact" class="btn btn-primary btn-sm w-full">Enquire Now</a>
         </div>
       </div>
+      <div class="footer__social">
+        <div class="footer__heading">Follow TIBS</div>
+        <div class="footer__social-icons">
+          <a href="https://www.instagram.com/theinvestmentbankingschool" target="_blank" rel="noopener noreferrer" aria-label="Follow TIBS on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com/@theinvestmentbankingschool" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to TIBS on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/share/1DaCo7Gu2b/" target="_blank" rel="noopener noreferrer" aria-label="Follow TIBS on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/posts/the-investment-banking-school_activity-7500493391957463040-v-FF" target="_blank" rel="noopener noreferrer" aria-label="Connect with TIBS on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
       <div class="footer__bottom">
-        <div class="footer__copyright">&copy; <?php echo date('Y'); ?> The Investment Banking School (TIBS). All rights reserved.</div>
+        <div class="footer__copyright">&copy; <?php echo date('Y'); ?> The Investment Banking School (TIBS). All rights reserved. | Website by <a href="https://www.bytemax.in" target="_blank" rel="noopener noreferrer" class="footer__credit-link">Bytemax</a></div>
         <a href="https://www.theinvestmentbankingschool.com" target="_blank" rel="noopener" style="font-size:0.8125rem;color:rgba(255,255,255,0.35);">www.theinvestmentbankingschool.com</a>
       </div>
     </div>
   </footer>
+
+  <!-- ======== FLOATING CONTACT BUTTONS ======== -->
+  <div class="floating-cta" id="floating-cta">
+    <a href="https://wa.me/917511193707" target="_blank" rel="noopener noreferrer" class="floating-cta__btn floating-cta__btn--whatsapp" aria-label="Chat with TIBS on WhatsApp" data-tooltip="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+917511193707" class="floating-cta__btn floating-cta__btn--call" aria-label="Call TIBS" data-tooltip="Call Us">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>

@@ -292,7 +292,7 @@
           </div>
           <div class="cta-band__contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:theinvestmentbankingschool@gmail.com">theinvestmentbankingschool@gmail.com</a>
+            <a href="mailto:info@theinvestmentbankingschool.com">info@theinvestmentbankingschool.com</a>
           </div>
         </div>
       </div>

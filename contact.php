@@ -98,7 +98,7 @@
               <div class="contact-info__icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <div class="contact-info__label">Email</div>
-                <div class="contact-info__value"><a href="mailto:theinvestmentbankingschool@gmail.com">theinvestmentbankingschool@gmail.com</a></div>
+                <div class="contact-info__value"><a href="mailto:info@theinvestmentbankingschool.com">info@theinvestmentbankingschool.com</a></div>
               </div>
             </div>
 
