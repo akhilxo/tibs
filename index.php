@@ -1,28 +1,3 @@
-<?php
-/**
- * TIBS — Front Controller / Router
- * 
- * Works on both Herd (Nginx) and cPanel (Apache).
- * Apache .htaccess routes all non-file requests here.
- * Dispatches clean URLs to the correct PHP page file.
- */
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$uri = '/' . trim($uri, '/');
-
-$routes = [
-    '/about'    => __DIR__ . '/about.php',
-    '/programs' => __DIR__ . '/programs.php',
-    '/ibcp'     => __DIR__ . '/ibcp.php',
-    '/contact'  => __DIR__ . '/contact.php',
-];
-
-if ($uri !== '/' && isset($routes[$uri])) {
-    require $routes[$uri];
-    exit;
-}
-
-// Fall through to homepage below for '/' or unmatched routes
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

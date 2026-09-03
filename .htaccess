@@ -1,30 +1,17 @@
 # ============================================================
-# TIBS — Apache Rewrite Rules (cPanel / Apache)
-# Routes all requests through index.php front controller
+# TIBS — Clean URLs (Remove .php extension)
+# Compatible with cPanel / Apache
 # ============================================================
 
 RewriteEngine On
 RewriteBase /
 
-# --- Redirect .php extension to clean URL (301) ---
-# e.g. /about.php → /about  (only for actual browser requests)
+# --- Redirect .php URLs to clean URLs (301) ---
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
-# --- Redirect /index to / (canonical home) ---
-RewriteCond %{THE_REQUEST} \s/index[\s?] [NC]
-RewriteRule ^ / [R=301,L]
-
-# --- Remove trailing slashes (except root) ---
+# --- Serve .php file for clean URLs ---
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^(.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# --- Serve existing files and directories as-is ---
-# CSS, JS, images, fonts, etc.
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# --- Route everything else through index.php ---
-RewriteRule ^ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
