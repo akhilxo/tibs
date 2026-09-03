@@ -4,7 +4,6 @@
 # ============================================================
 
 RewriteEngine On
-RewriteBase /
 
 # --- Redirect .php URLs to clean URLs (301) ---
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
