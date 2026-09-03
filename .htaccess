@@ -4,6 +4,7 @@
 # ============================================================
 
 RewriteEngine On
+RewriteBase /
 
 # --- Redirect .php extension to clean URL (301) ---
 # e.g. /about.php → /about  (only for actual browser requests)

@@ -2,11 +2,12 @@
 /**
  * TIBS — Front Controller / Router
  * 
- * Herd (Nginx + Valet) routes all requests to index.php.
- * This router dispatches clean URLs to the correct PHP page file.
+ * Works on both Herd (Nginx) and cPanel (Apache).
+ * Apache .htaccess routes all non-file requests here.
+ * Dispatches clean URLs to the correct PHP page file.
  */
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$uri = rtrim($uri, '/');
+$uri = '/' . trim($uri, '/');
 
 $routes = [
     '/about'    => __DIR__ . '/about.php',
@@ -15,10 +16,12 @@ $routes = [
     '/contact'  => __DIR__ . '/contact.php',
 ];
 
-if (isset($routes[$uri])) {
+if ($uri !== '/' && isset($routes[$uri])) {
     require $routes[$uri];
     exit;
 }
+
+// Fall through to homepage below for '/' or unmatched routes
 ?>
 <!DOCTYPE html>
 <html lang="en">
