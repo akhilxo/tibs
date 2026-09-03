@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>IBCP | Investment Banking Certificate Program | TIBS</title>
   <meta name="description" content="The Investment Banking Certificate Program (IBCP) by TIBS. 8 core modules from financial statements to capstone deal simulation. Practitioner-led, live + recorded.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css">
 </head>
 <body>
 
@@ -29,7 +30,7 @@
         <p class="label" style="color:rgba(255,255,255,0.5);font-size:1.5rem;letter-spacing:0.15em;margin-bottom:var(--space-lg);">IBCP</p>
         <p class="hero__subtitle">A practitioner-led certificate program designed to take learners from financial statements to a fully built valuation and deal pitch.</p>
         <div class="hero__actions">
-          <a href="/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="<?= $b ?>/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
           <a href="#curriculum" class="btn btn-secondary--light btn-lg">Explore Curriculum</a>
         </div>
       </div>
@@ -284,7 +285,7 @@
         <p class="label label--gold mb-lg">Apply Now</p>
         <h2 class="heading-lg cta-band__title">Reserve Your Place in the Next Cohort</h2>
         <p class="cta-band__text">Seats for the next cohort are limited. Take the first step towards a career in investment banking.</p>
-        <a href="/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="<?= $b ?>/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
         <div class="cta-band__contact">
           <div class="cta-band__contact-item">
             <i class="fa-solid fa-phone"></i>
@@ -301,6 +302,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <script src="script.js"></script>
+  <script src="<?= $b ?>/script.js"></script>
 </body>
 </html>

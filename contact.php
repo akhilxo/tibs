@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Contact & Enquire | TIBS | The Investment Banking School</title>
   <meta name="description" content="Enquire about the next IBCP cohort at The Investment Banking School. Contact us by phone, email or through our enquiry form.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css">
 </head>
 <body>
 
@@ -72,7 +73,7 @@
               <h3 class="form-success__title">Enquiry Submitted Successfully</h3>
               <p class="form-success__text">Thank you for your interest in the IBCP. Our team will get back to you shortly.</p>
               <div class="mt-xl">
-                <a href="/ibcp" class="btn btn-secondary">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="<?= $b ?>/ibcp" class="btn btn-secondary">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -135,7 +136,7 @@
               <span style="font-size:0.875rem;color:var(--gray-600);">Placement Assistance</span>
             </div>
             <div class="mt-lg">
-              <a href="/ibcp" class="btn btn-ghost">Explore the IBCP <i class="fa-solid fa-arrow-right" style="font-size:0.75rem;"></i></a>
+              <a href="<?= $b ?>/ibcp" class="btn btn-ghost">Explore the IBCP <i class="fa-solid fa-arrow-right" style="font-size:0.75rem;"></i></a>
             </div>
           </div>
         </div>
@@ -146,6 +147,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <script src="script.js"></script>
+  <script src="<?= $b ?>/script.js"></script>
 </body>
 </html>

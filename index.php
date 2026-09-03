@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>TIBS | The Investment Banking School | Where Bankers Are Made</title>
   <meta name="description" content="TIBS equips finance aspirants with practical, deal-tested skills that real banking floors demand. Explore the Investment Banking Certificate Program (IBCP).">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css">
 </head>
 <body>
 
@@ -28,8 +29,8 @@
         <h1 class="display-lg hero__title">Where Bankers<br>Are <span class="text-gold">Made.</span></h1>
         <p class="hero__subtitle">TIBS equips finance aspirants with practical, deal-tested skills that real banking floors demand, with placement assistance.</p>
         <div class="hero__actions">
-          <a href="/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
+          <a href="<?= $b ?>/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="<?= $b ?>/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
         </div>
       </div>
     </div>
@@ -88,7 +89,7 @@
             <li><i class="fa-solid fa-check"></i> Deal Analysis</li>
             <li><i class="fa-solid fa-check"></i> Deal Pitching</li>
           </ul>
-          <a href="/about" class="btn btn-secondary">About TIBS <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="<?= $b ?>/about" class="btn btn-secondary">About TIBS <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="about-content__visual fade-in-right">
           <div class="about-content__visual-card">
@@ -163,7 +164,7 @@
           <hr class="gold-rule">
           <p class="body-lg">A comprehensive, practitioner-led certificate program designed to take learners from financial statements to a fully built valuation and deal pitch.</p>
           <div class="mt-xl">
-            <a href="/ibcp" class="btn btn-primary">Explore the Program <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?= $b ?>/ibcp" class="btn btn-primary">Explore the Program <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="featured-program__visual fade-in-right">
@@ -289,7 +290,7 @@
         </div>
       </div>
       <div class="text-center mt-2xl fade-in">
-        <a href="/ibcp" class="btn btn-primary">View the Complete Program <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="<?= $b ?>/ibcp" class="btn btn-primary">View the Complete Program <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -321,7 +322,7 @@
         <p class="label label--gold mb-lg">Limited Seats</p>
         <h2 class="heading-lg cta-band__title">Seats for the Next Cohort Are Limited</h2>
         <p class="cta-band__text">Take the first step towards a career in investment banking. Enquire about the next Investment Banking Certificate Program batch.</p>
-        <a href="/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="<?= $b ?>/contact" class="btn btn-primary btn-lg">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
         <div class="cta-band__contact">
           <div class="cta-band__contact-item">
             <i class="fa-solid fa-phone"></i>
@@ -338,6 +339,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <script src="script.js"></script>
+  <script src="<?= $b ?>/script.js"></script>
 </body>
 </html>

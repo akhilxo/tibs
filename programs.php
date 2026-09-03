@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Programs | TIBS | The Investment Banking School</title>
   <meta name="description" content="Explore programs offered by The Investment Banking School (TIBS). Practitioner-led certificate programs designed for careers in investment banking and corporate finance.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css">
 </head>
 <body>
 
@@ -71,8 +72,8 @@
               </div>
             </div>
             <div class="program-listing-card__actions">
-              <a href="/ibcp" class="btn btn-primary">View Program Details <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="/contact" class="btn btn-secondary">Enquire Now</a>
+              <a href="<?= $b ?>/ibcp" class="btn btn-primary">View Program Details <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="<?= $b ?>/contact" class="btn btn-secondary">Enquire Now</a>
             </div>
           </div>
           <div class="program-listing-card__sidebar">
@@ -102,7 +103,7 @@
           <i class="fa-solid fa-plus programs-coming-soon__icon"></i>
           <h3 class="programs-coming-soon__title">More Programs Coming Soon</h3>
           <p class="programs-coming-soon__text">New programs are being developed by the TIBS team. Enquire to stay updated on upcoming offerings.</p>
-          <a href="/contact" class="btn btn-ghost">Get Notified <i class="fa-solid fa-arrow-right" style="font-size:0.75rem;"></i></a>
+          <a href="<?= $b ?>/contact" class="btn btn-ghost">Get Notified <i class="fa-solid fa-arrow-right" style="font-size:0.75rem;"></i></a>
         </div>
       </div>
     </div>
@@ -116,8 +117,8 @@
         <h2 class="heading-lg cta-band__title">Ready to Begin Your Journey?</h2>
         <p class="cta-band__text">Explore our flagship program or reach out to learn more about upcoming offerings from TIBS.</p>
         <div class="flex justify-center gap-base flex-wrap">
-          <a href="/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
+          <a href="<?= $b ?>/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="<?= $b ?>/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
         </div>
       </div>
     </div>
@@ -125,6 +126,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <script src="script.js"></script>
+  <script src="<?= $b ?>/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>About TIBS | The Investment Banking School</title>
   <meta name="description" content="TIBS was built by bankers, for future bankers. Learn about our mission to bridge the gap between classroom finance and real investment banking.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css">
 </head>
 <body>
 
@@ -145,8 +146,8 @@
         <h2 class="heading-lg cta-band__title">Explore the Investment Banking Certificate Program</h2>
         <p class="cta-band__text">Discover the complete IBCP curriculum, program format, and how it can prepare you for a career in investment banking.</p>
         <div class="flex justify-center gap-base flex-wrap">
-          <a href="/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
+          <a href="<?= $b ?>/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="<?= $b ?>/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
         </div>
       </div>
     </div>
@@ -154,6 +155,6 @@
 
   <?php include 'footer.php'; ?>
 
-  <script src="script.js"></script>
+  <script src="<?= $b ?>/script.js"></script>
 </body>
 </html>

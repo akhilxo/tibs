@@ -1,3 +1,4 @@
+<?php $b = defined('BASE_PATH') ? BASE_PATH : ''; ?>
   <!-- ======== FOOTER ======== -->
   <footer class="footer" id="footer">
     <div class="container">
@@ -9,10 +10,10 @@
         <div>
           <div class="footer__heading">Navigation</div>
           <div class="footer__links">
-            <a href="/">Home</a>
-            <a href="/about">About TIBS</a>
-            <a href="/programs">Programs</a>
-            <a href="/contact">Contact</a>
+            <a href="<?= $b ?>/">Home</a>
+            <a href="<?= $b ?>/about">About TIBS</a>
+            <a href="<?= $b ?>/programs">Programs</a>
+            <a href="<?= $b ?>/contact">Contact</a>
           </div>
         </div>
         <div>
@@ -29,7 +30,7 @@
         <div>
           <div class="footer__heading">Get Started</div>
           <p style="font-size:0.875rem;color:rgba(255,255,255,0.5);margin-bottom:var(--space-base);line-height:1.6;">Ready to begin your journey in investment banking?</p>
-          <a href="/contact" class="btn btn-primary btn-sm w-full">Enquire Now</a>
+          <a href="<?= $b ?>/contact" class="btn btn-primary btn-sm w-full">Enquire Now</a>
         </div>
       </div>
       <div class="footer__social">
