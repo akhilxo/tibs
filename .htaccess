@@ -1,25 +1,29 @@
 # ============================================================
-# TIBS — Pretty URL Rewrite Rules
-# Requires Apache with mod_rewrite enabled (Laravel Herd default)
+# TIBS — Apache Rewrite Rules (cPanel / Apache)
+# Routes all requests through index.php front controller
 # ============================================================
 
 RewriteEngine On
 
 # --- Redirect .php extension to clean URL (301) ---
-# e.g. /about.php → /about
+# e.g. /about.php → /about  (only for actual browser requests)
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
 # --- Redirect /index to / (canonical home) ---
-RewriteRule ^index$ / [R=301,L]
-
-# --- Serve .php file for clean URLs ---
-# e.g. /about → about.php (internally)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L]
+RewriteCond %{THE_REQUEST} \s/index[\s?] [NC]
+RewriteRule ^ / [R=301,L]
 
 # --- Remove trailing slashes (except root) ---
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} ^(.+)/$
 RewriteRule ^ %1 [R=301,L]
+
+# --- Serve existing files and directories as-is ---
+# CSS, JS, images, fonts, etc.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --- Route everything else through index.php ---
+RewriteRule ^ index.php [L]
