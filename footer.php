@@ -39,7 +39,7 @@
           <a href="https://www.instagram.com/theinvestmentbankingschool" target="_blank" rel="noopener noreferrer" aria-label="Follow TIBS on Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://youtube.com/@theinvestmentbankingschool" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to TIBS on YouTube"><i class="fa-brands fa-youtube"></i></a>
           <a href="https://www.facebook.com/share/1DaCo7Gu2b/" target="_blank" rel="noopener noreferrer" aria-label="Follow TIBS on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/posts/the-investment-banking-school_activity-7500493391957463040-v-FF" target="_blank" rel="noopener noreferrer" aria-label="Connect with TIBS on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/the-investment-banking-school" target="_blank" rel="noopener noreferrer" aria-label="Connect with TIBS on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
       <div class="footer__bottom">
