@@ -1,17 +1,10 @@
-<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About TIBS | The Investment Banking School</title>
-  <meta name="description" content="TIBS was built by bankers, for future bankers. Learn about our mission to bridge the gap between classroom finance and real investment banking.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css">
-</head>
-<body>
-
-  <?php $page = 'about'; include 'header.php'; ?>
+<?php
+require_once __DIR__ . '/config.php';
+$page = 'about';
+$pageTitle = 'About TIBS | The Investment Banking School';
+$pageDescription = 'TIBS was built by bankers, for future bankers. Learn about our mission to bridge the gap between classroom finance and real investment banking.';
+include 'header.php';
+?>
 
   <!-- ======== SECTION 1 — HERO ======== -->
   <section class="hero hero--page" id="about-hero">

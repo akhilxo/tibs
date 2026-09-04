@@ -1,17 +1,10 @@
-<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Enquire | TIBS | The Investment Banking School</title>
-  <meta name="description" content="Enquire about the next IBCP cohort at The Investment Banking School. Contact us by phone, email or through our enquiry form.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css">
-</head>
-<body>
-
-  <?php $page = 'contact'; include 'header.php'; ?>
+<?php
+require_once __DIR__ . '/config.php';
+$page = 'contact';
+$pageTitle = 'Contact & Enquire | TIBS | The Investment Banking School';
+$pageDescription = 'Enquire about the next IBCP cohort at The Investment Banking School. Contact us by phone, email or through our enquiry form.';
+include 'header.php';
+?>
 
   <!-- ======== SECTION 1 — HERO ======== -->
   <section class="hero hero--page" id="contact-hero">

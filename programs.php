@@ -1,17 +1,10 @@
-<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs | TIBS | The Investment Banking School</title>
-  <meta name="description" content="Explore programs offered by The Investment Banking School (TIBS). Practitioner-led certificate programs designed for careers in investment banking and corporate finance.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css">
-</head>
-<body>
-
-  <?php $page = 'programs'; include 'header.php'; ?>
+<?php
+require_once __DIR__ . '/config.php';
+$page = 'programs';
+$pageTitle = 'Programs | TIBS | The Investment Banking School';
+$pageDescription = 'Explore programs offered by The Investment Banking School (TIBS). Practitioner-led certificate programs designed for careers in investment banking and corporate finance.';
+include 'header.php';
+?>
 
   <!-- ======== HERO ======== -->
   <section class="hero hero--page" id="programs-hero">

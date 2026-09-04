@@ -2,13 +2,29 @@
 /**
  * TIBS — Shared Header Partial
  * 
- * Usage: Set $page variable before including this file.
- * Example: $page = 'home'; include 'header.php';
+ * Usage: Set $page, $pageTitle, and $pageDescription before including this file.
+ * Example:
+ *   $page = 'home';
+ *   $pageTitle = 'TIBS | The Investment Banking School';
+ *   $pageDescription = 'Description here.';
+ *   include 'header.php';
  * 
  * Valid $page values: 'home', 'about', 'programs', 'ibcp', 'contact'
  */
 $b = defined('BASE_PATH') ? BASE_PATH : '';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= htmlspecialchars($pageTitle ?? 'TIBS | The Investment Banking School') ?></title>
+  <meta name="description" content="<?= htmlspecialchars($pageDescription ?? '') ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.0">
+</head>
+<body>
+
   <!-- ======== HEADER ======== -->
   <header class="header" id="header">
     <div class="header__inner">

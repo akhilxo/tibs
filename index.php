@@ -1,17 +1,10 @@
-<?php require_once __DIR__ . '/config.php'; $b = BASE_PATH; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIBS | The Investment Banking School | Where Bankers Are Made</title>
-  <meta name="description" content="TIBS equips finance aspirants with practical, deal-tested skills that real banking floors demand. Explore the Investment Banking Certificate Program (IBCP).">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css">
-</head>
-<body>
-
-  <?php $page = 'home'; include 'header.php'; ?>
+<?php
+require_once __DIR__ . '/config.php';
+$page = 'home';
+$pageTitle = 'TIBS | The Investment Banking School | Where Bankers Are Made';
+$pageDescription = 'TIBS equips finance aspirants with practical, deal-tested skills that real banking floors demand. Explore the Investment Banking Certificate Program (IBCP).';
+include 'header.php';
+?>
 
   <!-- ======== SECTION 1 — HERO ======== -->
   <section class="hero" id="hero">
