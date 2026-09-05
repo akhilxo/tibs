@@ -1,8 +1,11 @@
 <?php
 require_once __DIR__ . '/config.php';
 $page = 'contact';
-$pageTitle = 'Contact & Enquire | TIBS | The Investment Banking School';
-$pageDescription = 'Enquire about the next IBCP cohort at The Investment Banking School. Contact us by phone, email or through our enquiry form.';
+$pageTitle = 'Contact TIBS | Investment Banking Training Institute in Kochi, Kerala';
+$pageDescription = 'Get in touch with TIBS, the premier investment banking training institute in Kochi, Kerala. Enquire about upcoming batch dates, fees, and placement assistance.';
+$ogTitle = 'Contact TIBS | Investment Banking Course in Kochi, Kerala';
+$ogDescription = 'Enquire about the Investment Banking Certificate Program (IBCP) at TIBS in Kochi, Kerala. Contact us for syllabus, fees, and cohort details.';
+$ogImageAlt = 'Contact TIBS investment banking training institute in Kochi Kerala';
 include 'header.php';
 ?>
 
@@ -19,7 +22,7 @@ include 'header.php';
       <div class="hero__content" style="max-width:780px;">
         <p class="label label--gold">Get in Touch</p>
         <h1 class="display-md hero__title">Take the Next Step Towards a Career in <span class="text-gold">Investment Banking</span></h1>
-        <p class="hero__subtitle">Interested in the Investment Banking Certificate Program? Enquire about the next IBCP cohort and take the first step towards a career in banking.</p>
+        <p class="hero__subtitle">Interested in our investment banking course in Kochi, Kerala? Enquire about the next IBCP cohort and take the first step towards a career in banking.</p>
       </div>
     </div>
   </section>
@@ -35,7 +38,7 @@ include 'header.php';
             <div style="margin-bottom:var(--space-xl);">
               <p class="label label--gold">Enquiry Form</p>
               <h2 class="heading-md mt-sm">Send Us Your Enquiry</h2>
-              <p class="body-sm mt-sm">Fill in your details below and we'll get back to you about the next IBCP cohort.</p>
+              <p class="body-sm mt-sm">Fill in your details below to enquire about investment banking course fees in Kochi, syllabus, and upcoming cohort dates.</p>
             </div>
 
             <form id="enquiry-form">

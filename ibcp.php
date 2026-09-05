@@ -1,8 +1,11 @@
 <?php
 require_once __DIR__ . '/config.php';
 $page = 'ibcp';
-$pageTitle = 'IBCP | Investment Banking Certificate Program | TIBS';
-$pageDescription = 'The Investment Banking Certificate Program (IBCP) by TIBS. 8 core modules from financial statements to capstone deal simulation. Practitioner-led, live + recorded.';
+$pageTitle = 'Investment Banking Course in Kochi, Kerala | 100% Placement';
+$pageDescription = 'Join the top investment banking training institute in Kochi, Kerala. Master financial modeling, valuation, and M&A with 100% placement support. Apply today!';
+$ogTitle = 'Investment Banking Course in Kochi, Kerala | TIBS Certification & Placement';
+$ogDescription = 'Launch your career in capital markets with TIBS\'s practical investment banking course in Kochi. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.';
+$ogImageAlt = 'Investment banking training institute in Kochi Kerala - TIBS logo';
 include 'header.php';
 ?>
 

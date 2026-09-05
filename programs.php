@@ -1,8 +1,11 @@
 <?php
 require_once __DIR__ . '/config.php';
 $page = 'programs';
-$pageTitle = 'Programs | TIBS | The Investment Banking School';
-$pageDescription = 'Explore programs offered by The Investment Banking School (TIBS). Practitioner-led certificate programs designed for careers in investment banking and corporate finance.';
+$pageTitle = 'Programs | Investment Banking Course in Kochi | TIBS';
+$pageDescription = 'Explore practitioner-led investment banking certification courses in Kochi, Kerala at TIBS. Hands-on financial modeling, valuation, and placement assistance.';
+$ogTitle = 'Investment Banking Programs in Kochi, Kerala | TIBS';
+$ogDescription = 'Explore industry-led investment banking training courses in Kochi, Kerala with 100% placement support at TIBS.';
+$ogImageAlt = 'Investment banking course programs in Kochi Kerala - TIBS logo';
 include 'header.php';
 ?>
 
@@ -19,7 +22,7 @@ include 'header.php';
       <div class="hero__content">
         <p class="label label--gold">TIBS Programs</p>
         <h1 class="display-md hero__title">Programs Built for <span class="text-gold">Real Banking Careers</span></h1>
-        <p class="hero__subtitle">Practitioner-led certificate programs designed to equip you with the practical, deal-tested skills that investment banking and corporate finance roles demand.</p>
+        <p class="hero__subtitle">Practitioner-led investment banking courses in Kochi, Kerala designed to equip you with the practical, deal-tested skills that top banking floors and corporate finance roles demand.</p>
       </div>
     </div>
   </section>
@@ -41,7 +44,7 @@ include 'header.php';
             <p class="label label--gold">Certificate Program</p>
             <h3 class="program-listing-card__title">Investment Banking Certificate Program</h3>
             <p class="program-listing-card__acronym">IBCP</p>
-            <p class="program-listing-card__text">A comprehensive, practitioner-led certificate program designed to take learners from financial statements to a fully built valuation and deal pitch. Covers financial modelling, valuation, M&A, leveraged buyouts, equity research, and a capstone deal simulation.</p>
+            <p class="program-listing-card__text">A comprehensive investment banking course in Kochi, Kerala India taking learners from financial statement analysis to a fully built valuation model and deal pitch. Covers financial modeling, valuation, M&A, leveraged buyouts, equity research, and a capstone deal simulation.</p>
             <div class="program-listing-card__highlights">
               <div class="program-listing-card__highlight">
                 <i class="fa-solid fa-layer-group"></i>

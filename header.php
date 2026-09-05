@@ -18,10 +18,18 @@ $b = defined('BASE_PATH') ? BASE_PATH : '';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= htmlspecialchars($pageTitle ?? 'TIBS | The Investment Banking School') ?></title>
-  <meta name="description" content="<?= htmlspecialchars($pageDescription ?? '') ?>">
+  <title><?= htmlspecialchars($pageTitle ?? 'Investment Banking Course in Kochi, Kerala | 100% Placement') ?></title>
+  <meta name="description" content="<?= htmlspecialchars($pageDescription ?? 'Join the top investment banking training institute in Kochi, Kerala. Master financial modeling, valuation, and M&A with 100% placement support. Apply today!') ?>">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<?= htmlspecialchars($ogTitle ?? $pageTitle ?? 'Investment Banking Course in Kochi, Kerala | TIBS Certification & Placement') ?>">
+  <meta property="og:description" content="<?= htmlspecialchars($ogDescription ?? $pageDescription ?? 'Launch your career in capital markets with TIBS\'s practical investment banking course in Kochi. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.') ?>">
+  <meta property="og:image" content="<?= $b ?>/logo.png">
+  <meta property="og:image:alt" content="<?= htmlspecialchars($ogImageAlt ?? 'Investment banking training institute in Kochi Kerala - TIBS logo') ?>">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.0">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.1">
 </head>
 <body>
 
@@ -29,7 +37,7 @@ $b = defined('BASE_PATH') ? BASE_PATH : '';
   <header class="header" id="header">
     <div class="header__inner">
       <a href="<?= $b ?>/" class="header__logo">
-        <img src="<?= $b ?>/logo.jpg" alt="TIBS — The Investment Banking School" class="header__logo-img">
+        <img src="<?= $b ?>/logo-no-bg.png" alt="TIBS — The Investment Banking School" class="header__logo-img">
       </a>
       <nav class="header__nav" id="main-nav">
         <div class="header__nav-links">

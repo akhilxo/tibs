@@ -5,7 +5,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__brand-name">The Investment Banking School (TIBS)</div>
-          <p class="footer__brand-tagline">Equipping finance aspirants with practical, deal-tested skills that real banking floors demand.</p>
+          <p class="footer__brand-tagline">Equipping finance aspirants with practical, deal-tested skills. The premier investment banking training institute in Kochi, Kerala, India.</p>
         </div>
         <div>
           <div class="footer__heading">Navigation</div>
