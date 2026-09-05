@@ -28,6 +28,11 @@ $b = defined('BASE_PATH') ? BASE_PATH : '';
   <meta property="og:image" content="<?= $b ?>/logo.png">
   <meta property="og:image:alt" content="<?= htmlspecialchars($ogImageAlt ?? 'Investment banking training institute in Kochi Kerala - TIBS logo') ?>">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="<?= $b ?>/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= $b ?>/logo.png">
+  <link rel="apple-touch-icon" href="<?= $b ?>/logo.png">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.1">
 </head>
