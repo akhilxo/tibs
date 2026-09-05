@@ -6,4 +6,4 @@
  * - Local (Herd):  ''       → links become /about
  * - Subdirectory:  '/tibs'  → links become /tibs/about
  */
-define('BASE_PATH', '/tibs');
+define('BASE_PATH', '/');
