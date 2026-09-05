@@ -6,4 +6,4 @@
  * - Local (Herd):  ''       → links become /about
  * - Subdirectory:  '/tibs'  → links become /tibs/about
  */
-define('BASE_PATH', 'https://www.theinvestmentbankingschool.com/');
+define('BASE_PATH', 'https://www.theinvestmentbankingschool.com');
