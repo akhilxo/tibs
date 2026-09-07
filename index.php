@@ -3,9 +3,9 @@ require_once __DIR__ . '/config.php';
 $page = 'home';
 $pageTitle = 'Investment Banking Course in Kochi, Kerala | 100% Placement';
 $pageDescription = 'Join the top investment banking training institute in Kochi, Kerala. Master financial modeling, valuation, and M&A with 100% placement support. Apply today!';
-$ogTitle = 'Investment Banking Course in Kochi, Kerala | TIBS Certification & Placement';
-$ogDescription = 'Launch your career in capital markets with TIBS\'s practical investment banking course in Kochi. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.';
-$ogImageAlt = 'Investment banking training institute in Kochi Kerala - TIBS logo';
+$ogTitle = 'Investment Banking Course | TIBS Certification & Placement';
+$ogDescription = 'Launch your career in capital markets with TIBS\'s practical investment banking course. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.';
+$ogImageAlt = 'Investment banking training institute - TIBS logo';
 include 'header.php';
 ?>
 
@@ -23,7 +23,7 @@ include 'header.php';
       <div class="hero__content">
         <p class="label label--gold">The Investment Banking School</p>
         <h1 class="display-lg hero__title">Where Bankers<br>Are <span class="text-gold">Made.</span></h1>
-        <p class="hero__subtitle">TIBS offers an industry-led investment banking course in Kochi equipping finance aspirants with deal-tested skills in financial modeling, derivatives, and equity research with 100% placement assistance.</p>
+        <p class="hero__subtitle">TIBS offers an industry-led investment banking course equipping finance aspirants with deal-tested skills in financial modeling, derivatives, and equity research with 100% placement assistance.</p>
         <div class="hero__actions">
           <a href="<?= $b ?>/ibcp" class="btn btn-primary btn-lg">Explore the IBCP <i class="fa-solid fa-arrow-right"></i></a>
           <a href="<?= $b ?>/contact" class="btn btn-secondary--light btn-lg">Enquire Now</a>
@@ -31,6 +31,44 @@ include 'header.php';
       </div>
     </div>
   </section>
+
+  <!-- ======== BANK LOGOS SLIDER SECTION ======== -->
+  <?php
+  $bankLogos = [];
+  $banksDir = __DIR__ . '/logos/banks';
+  if (is_dir($banksDir)) {
+    $files = scandir($banksDir);
+    foreach ($files as $file) {
+      if ($file !== '.' && $file !== '..' && preg_match('/\.(png|jpe?g|svg|webp)$/i', $file)) {
+        $bankLogos[] = $b . '/logos/banks/' . $file;
+      }
+    }
+  }
+  if (!empty($bankLogos)):
+    // Repeat logos array to ensure a rich track length for smooth infinite looping
+    $repeatCount = max(2, (int)ceil(12 / count($bankLogos)));
+    $displayLogos = [];
+    for ($i = 0; $i < $repeatCount; $i++) {
+      $displayLogos = array_merge($displayLogos, $bankLogos);
+    }
+  ?>
+  <section class="logo-slider-section" aria-label="Partner and Hiring Banks">
+    <div class="logo-slider">
+      <div class="logo-slider__track">
+        <?php foreach ($displayLogos as $logo): ?>
+          <div class="logo-slider__item">
+            <img src="<?= htmlspecialchars($logo) ?>" alt="Bank Logo" loading="lazy">
+          </div>
+        <?php endforeach; ?>
+        <?php foreach ($displayLogos as $logo): ?>
+          <div class="logo-slider__item">
+            <img src="<?= htmlspecialchars($logo) ?>" alt="Bank Logo" loading="lazy">
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
 
   <!-- ======== SECTION 2 — PROGRAM HIGHLIGHTS ======== -->
   <section class="section" id="highlights">
@@ -112,7 +150,7 @@ include 'header.php';
     <div class="container">
       <div class="section-header fade-in">
         <p class="label label--gold">Why TIBS</p>
-        <h2 class="heading-lg">Why Choose TIBS for an Investment Banking Course in Kochi, Kerala?</h2>
+        <h2 class="heading-lg">Why Choose TIBS for an Investment Banking Course?</h2>
         <p class="body-lg">Every module in our investment banking training program is engineered to prepare you for high-impact roles across investment banking operations, capital markets, and wealth management.</p>
       </div>
       <div class="grid grid-3 stagger-children">
@@ -297,7 +335,7 @@ include 'header.php';
     <div class="container">
       <div class="section-header fade-in">
         <p class="label label--gold">Fees & Payment Options</p>
-        <h2 class="heading-lg">Investment Banking Course Fees in Kochi & Payment Structure</h2>
+        <h2 class="heading-lg">Investment Banking Course Fees & Payment Structure</h2>
         <p class="body-lg">We offer transparent program fee structures to ensure accessible, high-value education for aspiring investment bankers.</p>
       </div>
       <div class="extras-grid fade-in">
@@ -317,28 +355,40 @@ include 'header.php';
       <div class="section-header fade-in text-center mb-2xl">
         <p class="label label--gold">Got Questions?</p>
         <h2 class="heading-lg">Frequently Asked Questions</h2>
-        <p class="body-lg">Everything you need to know about our investment banking course in Kochi, Kerala.</p>
+        <p class="body-lg">Everything you need to know about our investment banking course.</p>
       </div>
       <div class="faq-grid fade-in">
         <div class="faq-card">
-          <h3 class="faq-card__question"><i class="fa-solid fa-circle-question"></i> How to become an investment banker in Kochi, Kerala?</h3>
-          <p class="faq-card__answer">To start a career in investment banking in Kochi, graduates and professionals need practical expertise in financial modeling, valuation, and deal structuring alongside theoretical finance knowledge. Enrolling in a targeted investment banking training institute in Kochi provides structured hands-on experience through real deal case studies and capstone projects. TIBS pairs technical training with dedicated career mentorship to help candidates transition into banking floors and corporate finance roles.</p>
+          <h3 class="faq-card__question">
+            <i class="fa-solid fa-circle-question faq-card__q-icon"></i>
+            <span class="faq-card__question-text">How to become an investment banker?</span>
+            <i class="fa-solid fa-chevron-down faq-card__toggle-icon"></i>
+          </h3>
+          <p class="faq-card__answer">To start a career in investment banking, graduates and professionals need practical expertise in financial modeling, valuation, and deal structuring alongside theoretical finance knowledge. Enrolling in a targeted investment banking training institute provides structured hands-on experience through real deal case studies and capstone projects. TIBS pairs technical training with dedicated career mentorship to help candidates transition into banking floors and corporate finance roles.</p>
         </div>
         <div class="faq-card">
-          <h3 class="faq-card__question"><i class="fa-solid fa-circle-question"></i> What is the fee for an investment banking course in Kerala?</h3>
-          <p class="faq-card__answer">Investment banking course fees in Kochi vary based on course depth, faculty credentials, and placement coverage. TIBS provides transparent program fee structures to ensure accessible education for ambitious finance students. Detailed fee schedules and enrollment details are shared upon submitting a program inquiry.</p>
+          <h3 class="faq-card__question">
+            <i class="fa-solid fa-circle-question faq-card__q-icon"></i>
+            <span class="faq-card__question-text">What is the fee for an investment banking course in Kerala?</span>
+            <i class="fa-solid fa-chevron-down faq-card__toggle-icon"></i>
+          </h3>
+          <p class="faq-card__answer">Investment banking course fees vary based on course depth, faculty credentials, and placement coverage. TIBS provides transparent program fee structures to ensure accessible education for ambitious finance students. Detailed fee schedules and enrollment details are shared upon submitting a program inquiry.</p>
         </div>
         <div class="faq-card">
-          <h3 class="faq-card__question"><i class="fa-solid fa-circle-question"></i> Do I need a finance background to join an investment banking certification for beginners?</h3>
+          <h3 class="faq-card__question">
+            <i class="fa-solid fa-circle-question faq-card__q-icon"></i>
+            <span class="faq-card__question-text">Do I need a finance background to join an investment banking certification for beginners?</span>
+            <i class="fa-solid fa-chevron-down faq-card__toggle-icon"></i>
+          </h3>
           <p class="faq-card__answer">No prior finance background is strictly required to join our investment banking certification for beginners. The curriculum begins with accounting foundations before advancing into financial statement analysis, LBOs, and equity research. Graduates from commerce, economics, engineering, and arts backgrounds can successfully build the technical skill set required for core banking roles.</p>
         </div>
         <div class="faq-card">
-          <h3 class="faq-card__question"><i class="fa-solid fa-circle-question"></i> What career roles and placement support are available after completing the course?</h3>
+          <h3 class="faq-card__question">
+            <i class="fa-solid fa-circle-question faq-card__q-icon"></i>
+            <span class="faq-card__question-text">What career roles and placement support are available after completing the course?</span>
+            <i class="fa-solid fa-chevron-down faq-card__toggle-icon"></i>
+          </h3>
           <p class="faq-card__answer">Graduates are prepared for career paths such as investment banking operations analyst, equity research associate, KYC/AML analyst, derivatives specialist, and wealth management associate. TIBS provides 100% placement assistance, including mock technical interviews, resume building, and direct profile placement with hiring partners across India.</p>
-        </div>
-        <div class="faq-card">
-          <h3 class="faq-card__question"><i class="fa-solid fa-circle-question"></i> How does TIBS compare with competitors like Imarticus Learning (CIBOP Cochin) or Boston Institute of Analytics (Kochi)?</h3>
-          <p class="faq-card__answer">While institutes like Imarticus Learning and BIA offer general analytics and operations courses, TIBS focuses exclusively on deal-tested investment banking, financial modeling, and valuation taught by senior industry practitioners. Our small batch sizes ensure personalized feedback, direct mentorship, and a capstone deal presentation deck that sets candidates apart during interviews.</p>
         </div>
       </div>
     </div>

@@ -170,4 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => counterObserver.observe(c));
   }
 
+  // ---- 8. FAQ ACCORDION TOGGLE ----
+  const faqCards = document.querySelectorAll('.faq-card');
+  faqCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const isOpen = card.classList.contains('active');
+      card.classList.toggle('active');
+    });
+  });
+
 });
+
