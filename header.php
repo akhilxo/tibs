@@ -18,13 +18,13 @@ $b = defined('BASE_PATH') ? BASE_PATH : '';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= htmlspecialchars($pageTitle ?? 'Investment Banking Course in Kochi, Kerala | 100% Placement') ?></title>
-  <meta name="description" content="<?= htmlspecialchars($pageDescription ?? 'Join the top investment banking training institute in Kochi, Kerala. Master financial modeling, valuation, and M&A with 100% placement support. Apply today!') ?>">
+  <title><?= htmlspecialchars($pageTitle ?? 'Investment Banking Course | 100% Placement') ?></title>
+  <meta name="description" content="<?= htmlspecialchars($pageDescription ?? 'Join the top investment banking training institute. Master financial modeling, valuation, and M&A with 100% placement support. Apply today!') ?>">
 
   <!-- Open Graph / Social Media Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="<?= htmlspecialchars($ogTitle ?? $pageTitle ?? 'Investment Banking Course in Kochi, Kerala | TIBS Certification & Placement') ?>">
-  <meta property="og:description" content="<?= htmlspecialchars($ogDescription ?? $pageDescription ?? 'Launch your career in capital markets with TIBS\'s practical investment banking course in Kochi. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.') ?>">
+  <meta property="og:description" content="<?= htmlspecialchars($ogDescription ?? $pageDescription ?? 'Launch your career in capital markets with TIBS\'s practical investment banking course. Master financial modeling, M&A, derivatives, and KYC/AML operations with industry experts.') ?>">
   <meta property="og:image" content="<?= $b ?>/logo.png">
   <meta property="og:image:alt" content="<?= htmlspecialchars($ogImageAlt ?? 'Investment banking training institute in Kochi Kerala - TIBS logo') ?>">
 
