@@ -418,6 +418,6 @@ include 'header.php';
 
   <?php include 'footer.php'; ?>
 
-  <script src="<?= $b ?>/script.js"></script>
+  <script src="<?= $b ?>/script.js?v1.0"></script>
 </body>
 </html>
