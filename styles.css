@@ -2256,7 +2256,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--gray-50);
   border-top: 1px solid var(--gray-200);
   border-bottom: 1px solid var(--gray-200);
-  padding: var(--space-lg) 0;
+  padding: 15px 0;
   overflow: hidden;
   position: relative;
 }
@@ -2291,10 +2291,14 @@ h1, h2, h3, h4, h5, h6 {
 .logo-slider__track {
   display: flex;
   align-items: center;
-  gap: var(--space-2xl);
+  gap: var(--space-3xl);
   width: max-content;
-  animation: logoInfiniteScroll 25s linear infinite;
+  animation: logoInfiniteScroll 50s linear infinite;
   will-change: transform;
+}
+
+.logo-slider:hover .logo-slider__track {
+  animation-play-state: paused;
 }
 
 .logo-slider__item {
@@ -2306,9 +2310,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-slider__item img {
-  height: 42px;
+  height: 34px;
+  max-width: 140px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.logo-slider__item img:hover {
+  opacity: 1;
 }
 
 @keyframes logoInfiniteScroll {
@@ -2322,18 +2334,19 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .logo-slider-section {
-    padding: var(--space-md) 0;
+    padding: 15px 0;
   }
   .logo-slider::before,
   .logo-slider::after {
-    width: 50px;
+    width: 40px;
   }
   .logo-slider__track {
-    gap: var(--space-xl);
-    animation-duration: 18s;
+    gap: var(--space-2xl);
+    animation-duration: 35s;
   }
   .logo-slider__item img {
-    height: 32px;
+    height: 26px;
+    max-width: 110px;
   }
 }
 

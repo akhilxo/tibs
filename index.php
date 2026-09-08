@@ -32,44 +32,6 @@ include 'header.php';
     </div>
   </section>
 
-  <!-- ======== BANK LOGOS SLIDER SECTION ======== -->
-  <?php
-  $bankLogos = [];
-  $banksDir = __DIR__ . '/logos/banks';
-  if (is_dir($banksDir)) {
-    $files = scandir($banksDir);
-    foreach ($files as $file) {
-      if ($file !== '.' && $file !== '..' && preg_match('/\.(png|jpe?g|svg|webp)$/i', $file)) {
-        $bankLogos[] = $b . '/logos/banks/' . $file;
-      }
-    }
-  }
-  if (!empty($bankLogos)):
-    // Repeat logos array to ensure a rich track length for smooth infinite looping
-    $repeatCount = max(2, (int)ceil(12 / count($bankLogos)));
-    $displayLogos = [];
-    for ($i = 0; $i < $repeatCount; $i++) {
-      $displayLogos = array_merge($displayLogos, $bankLogos);
-    }
-  ?>
-  <section class="logo-slider-section" aria-label="Partner and Hiring Banks">
-    <div class="logo-slider">
-      <div class="logo-slider__track">
-        <?php foreach ($displayLogos as $logo): ?>
-          <div class="logo-slider__item">
-            <img src="<?= htmlspecialchars($logo) ?>" alt="Bank Logo" loading="lazy">
-          </div>
-        <?php endforeach; ?>
-        <?php foreach ($displayLogos as $logo): ?>
-          <div class="logo-slider__item">
-            <img src="<?= htmlspecialchars($logo) ?>" alt="Bank Logo" loading="lazy">
-          </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
-  <?php endif; ?>
-
   <!-- ======== SECTION 2 — PROGRAM HIGHLIGHTS ======== -->
   <section class="section" id="highlights">
     <div class="container">
@@ -235,6 +197,53 @@ include 'header.php';
     </div>
   </section>
 
+  <!-- ======== BANK LOGOS SLIDER SECTION ======== -->
+  <?php
+  $bankLogos = [];
+  $banksDir = __DIR__ . '/logos/banks';
+  if (is_dir($banksDir)) {
+    $files = scandir($banksDir);
+    foreach ($files as $file) {
+      if ($file !== '.' && $file !== '..' && preg_match('/\.(png|jpe?g|svg|webp)$/i', $file)) {
+        // Derive clean brand name for alt text
+        $cleanName = preg_replace('/\.(png|jpe?g|svg|webp)$/i', '', $file);
+        $cleanName = str_replace(['-com', '-brandmark', '-logo', '-hk', '-banner-2', '-banner', 'group-'], '', $cleanName);
+        $cleanName = ucwords(str_replace(['-', '_'], ' ', $cleanName));
+        $cleanName = str_replace(['Goldmansachs', 'Bnpparibas', 'Jpmorgan', 'Hsbc'], ['Goldman Sachs', 'BNP Paribas', 'JPMorgan', 'HSBC'], $cleanName);
+
+        $bankLogos[] = [
+          'src' => $b . '/logos/banks/' . $file,
+          'alt' => trim($cleanName) . ' Logo'
+        ];
+      }
+    }
+  }
+  if (!empty($bankLogos)):
+    // Repeat logos array to ensure a rich track length for smooth infinite looping
+    $repeatCount = max(2, (int)ceil(12 / count($bankLogos)));
+    $displayLogos = [];
+    for ($i = 0; $i < $repeatCount; $i++) {
+      $displayLogos = array_merge($displayLogos, $bankLogos);
+    }
+  ?>
+  <section class="logo-slider-section" aria-label="Partner and Hiring Banks">
+    <div class="logo-slider">
+      <div class="logo-slider__track">
+        <?php foreach ($displayLogos as $logo): ?>
+          <div class="logo-slider__item">
+            <img src="<?= htmlspecialchars($logo['src']) ?>" alt="<?= htmlspecialchars($logo['alt']) ?>" loading="lazy">
+          </div>
+        <?php endforeach; ?>
+        <?php foreach ($displayLogos as $logo): ?>
+          <div class="logo-slider__item">
+            <img src="<?= htmlspecialchars($logo['src']) ?>" alt="<?= htmlspecialchars($logo['alt']) ?>" loading="lazy">
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+  <?php endif; ?>
+
   <!-- ======== SECTION 6 — WHO SHOULD JOIN ======== -->
   <section class="section" id="who-should-join">
     <div class="container">
@@ -369,7 +378,7 @@ include 'header.php';
         <div class="faq-card">
           <h3 class="faq-card__question">
             <i class="fa-solid fa-circle-question faq-card__q-icon"></i>
-            <span class="faq-card__question-text">What is the fee for an investment banking course in Kerala?</span>
+            <span class="faq-card__question-text">What is the fee for an investment banking course?</span>
             <i class="fa-solid fa-chevron-down faq-card__toggle-icon"></i>
           </h3>
           <p class="faq-card__answer">Investment banking course fees vary based on course depth, faculty credentials, and placement coverage. TIBS provides transparent program fee structures to ensure accessible education for ambitious finance students. Detailed fee schedules and enrollment details are shared upon submitting a program inquiry.</p>
