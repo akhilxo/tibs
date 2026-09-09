@@ -34,7 +34,7 @@ $b = defined('BASE_PATH') ? BASE_PATH : '';
   <link rel="apple-touch-icon" href="<?= $b ?>/logo.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.5">
+  <link rel="stylesheet" href="<?= $b ?>/styles.css?v=1.7">
 </head>
 <body>
 
