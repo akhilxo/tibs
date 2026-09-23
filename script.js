@@ -92,20 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- 6. CONTACT FORM HANDLING ----
   const contactForm = document.getElementById('enquiry-form');
+  const formErrorAlert = document.getElementById('form-error');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      if (formErrorAlert) {
+        formErrorAlert.style.display = 'none';
+        formErrorAlert.textContent = '';
+      }
 
       // Basic validation
       const fullName = contactForm.querySelector('#full-name');
       const email = contactForm.querySelector('#email');
       const phone = contactForm.querySelector('#phone');
+      const course = contactForm.querySelector('#course');
       const message = contactForm.querySelector('#message');
+      const submitBtn = contactForm.querySelector('#submit-btn');
 
       let valid = true;
 
-      [fullName, email, phone, message].forEach(field => {
+      [fullName, email, phone, course, message].forEach(field => {
         if (field && !field.value.trim()) {
           field.style.borderColor = '#d30a28';
           valid = false;
@@ -125,20 +133,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      // Show success state
-      const formContainer = document.querySelector('.form-card form');
-      const successMessage = document.querySelector('.form-success');
+      // Loading state on submit button
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Enquiry...';
+      }
 
-      if (formContainer && successMessage) {
-        formContainer.style.display = 'none';
-        successMessage.classList.add('show');
+      try {
+        const formData = new FormData(contactForm);
+        const endpoint = contactForm.getAttribute('action') || 'send_enquiry';
+
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (response.ok && data && data.success) {
+          // Show success state
+          const formContainer = document.querySelector('.form-card form');
+          const successMessage = document.querySelector('.form-success');
+          if (formContainer && successMessage) {
+            formContainer.style.display = 'none';
+            successMessage.classList.add('show');
+          }
+        } else {
+          const errMsg = (data && data.error) || 'We were unable to send your enquiry at this time. Please contact us directly via phone or email.';
+          if (formErrorAlert) {
+            formErrorAlert.textContent = errMsg;
+            formErrorAlert.style.display = 'block';
+            formErrorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            alert(errMsg);
+          }
+        }
+      } catch (err) {
+        console.error('Submission error:', err);
+        const errMsg = 'A network error occurred. Please check your connection or contact us directly.';
+        if (formErrorAlert) {
+          formErrorAlert.textContent = errMsg;
+          formErrorAlert.style.display = 'block';
+        } else {
+          alert(errMsg);
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
       }
     });
 
     // Clear error styling on input
-    contactForm.querySelectorAll('input, textarea').forEach(field => {
-      field.addEventListener('input', () => {
+    contactForm.querySelectorAll('input, select, textarea').forEach(field => {
+      const eventName = field.tagName === 'SELECT' ? 'change' : 'input';
+      field.addEventListener(eventName, () => {
         field.style.borderColor = '';
+        if (formErrorAlert) {
+          formErrorAlert.style.display = 'none';
+        }
       });
     });
   }

@@ -165,17 +165,24 @@ include 'header.php';
         </div>
         <div class="featured-program__visual fade-in-right">
           <div class="featured-program__attr">
+            <div class="featured-program__attr-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="featured-program__attr-label">Duration</div>
+              <div class="featured-program__attr-value">3 Months &amp; 6 Months</div>
+            </div>
+          </div>
+          <div class="featured-program__attr">
+            <div class="featured-program__attr-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <div class="featured-program__attr-label">Batches</div>
+              <div class="featured-program__attr-value">Regular &amp; Weekend</div>
+            </div>
+          </div>
+          <div class="featured-program__attr">
             <div class="featured-program__attr-icon"><i class="fa-solid fa-video"></i></div>
             <div>
               <div class="featured-program__attr-label">Format</div>
               <div class="featured-program__attr-value">Live + Recorded</div>
-            </div>
-          </div>
-          <div class="featured-program__attr">
-            <div class="featured-program__attr-icon"><i class="fa-solid fa-signal"></i></div>
-            <div>
-              <div class="featured-program__attr-label">Level</div>
-              <div class="featured-program__attr-value">Beginner → Advanced</div>
             </div>
           </div>
           <div class="featured-program__attr">

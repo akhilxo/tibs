@@ -22,7 +22,7 @@ include 'header.php';
       <div class="hero__content">
         <p class="label label--gold">About TIBS</p>
         <h1 class="display-md hero__title">Built by Bankers,<br>for <span class="text-gold">Future Bankers</span></h1>
-        <p class="hero__subtitle">The Investment Banking School (TIBS) in Kochi, Kerala was created with one mission: to bridge the gap between classroom finance education and the practical skills that real banking floors demand.</p>
+        <p class="hero__subtitle">The Investment Banking School (TIBS) was created with one mission: to bridge the gap between classroom finance education and the practical skills that real banking floors demand.</p>
       </div>
     </div>
   </section>
@@ -37,7 +37,7 @@ include 'header.php';
           <hr class="gold-rule">
           <p class="body-lg">There is a significant gap between what traditional finance education teaches and what investment banking professionals actually need on the job.</p>
           <p class="body-md mt-base">Most finance programs cover theory, but rarely teach you to build a three-statement model, run a DCF, structure an M&A deal, or present a pitch book to a client.</p>
-          <p class="body-md mt-base">TIBS was established as a dedicated investment banking training institute in Kochi/Cochin to close that gap. Every module, every case study, and every assessment in the IBCP is designed around practical, deal-tested skills used in professional banking environments.</p>
+          <p class="body-md mt-base">TIBS was established as a dedicated investment banking training institute to close that gap. Every module, every case study, and every assessment in the IBCP is designed around practical, deal-tested skills used in professional banking environments.</p>
         </div>
         <div class="about-content__visual fade-in-right">
           <div class="about-content__visual-card">

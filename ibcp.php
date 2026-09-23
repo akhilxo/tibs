@@ -39,8 +39,14 @@ include 'header.php';
       <div class="section-header fade-in">
         <p class="label label--gold">Program Overview</p>
         <h2 class="heading-lg">The IBCP at a Glance</h2>
+        <p class="body-md mt-sm">Available in <strong>3 Months Regular (Weekday)</strong> and <strong>6 Months Weekend</strong> formats to suit both students and working professionals.</p>
       </div>
       <div class="grid grid-5 stagger-children">
+        <div class="highlight-card">
+          <div class="highlight-card__icon"><i class="fa-solid fa-clock"></i></div>
+          <div class="highlight-card__title">3 &amp; 6 Months</div>
+          <div class="highlight-card__text">Regular &amp; Weekend tracks</div>
+        </div>
         <div class="highlight-card">
           <div class="highlight-card__icon"><i class="fa-solid fa-layer-group"></i></div>
           <div class="highlight-card__title">8 Core Modules</div>
@@ -52,13 +58,8 @@ include 'header.php';
           <div class="highlight-card__text">Flexible learning</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-card__icon"><i class="fa-solid fa-users"></i></div>
-          <div class="highlight-card__title">Small Batch Cohorts</div>
-          <div class="highlight-card__text">Personal attention</div>
-        </div>
-        <div class="highlight-card">
           <div class="highlight-card__icon"><i class="fa-solid fa-briefcase"></i></div>
-          <div class="highlight-card__title">Capstone Deal Project</div>
+          <div class="highlight-card__title">Capstone Project</div>
           <div class="highlight-card__text">Real-deal simulation</div>
         </div>
         <div class="highlight-card">
@@ -222,29 +223,28 @@ include 'header.php';
       <div class="grid grid-3 stagger-children">
         <div class="audience-card">
           <div class="audience-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3 class="audience-card__title">Students & Graduates</h3>
-          <p class="audience-card__text">Students and graduates aiming for a career in banking, looking to build the skills that employers actually value.</p>
+          <h3 class="audience-card__title">Students &amp; Graduates</h3>
+          <p class="audience-card__text">Aiming for an early career in investment banking. Fast-track with the <strong>3 Months Regular Course</strong> or balance studies with the <strong>6 Months Weekend Course</strong>.</p>
           <ul class="audience-card__list">
-            <li>Commerce</li>
-            <li>Economics</li>
-            <li>Finance</li>
-            <li>Engineering</li>
+            <li>Commerce &amp; Economics</li>
+            <li>Finance &amp; BBA / B.Com</li>
+            <li>Engineering Graduates</li>
           </ul>
         </div>
         <div class="audience-card">
           <div class="audience-card__icon"><i class="fa-solid fa-briefcase"></i></div>
           <h3 class="audience-card__title">Working Professionals</h3>
-          <p class="audience-card__text">Professionals looking to transition into high-impact finance roles where modelling and deal skills are essential.</p>
+          <p class="audience-card__text">Professionals looking to transition into high-impact finance roles without quitting their job through the <strong>6 Months Weekend Course</strong> (Sat &amp; Sun).</p>
           <ul class="audience-card__list">
-            <li>Investment Banking</li>
-            <li>Equity Research</li>
-            <li>Corporate Finance</li>
+            <li>Investment Banking &amp; IB Ops</li>
+            <li>Equity Research &amp; Advisory</li>
+            <li>Corporate Finance &amp; FP&amp;A</li>
           </ul>
         </div>
         <div class="audience-card">
           <div class="audience-card__icon"><i class="fa-solid fa-building-columns"></i></div>
           <h3 class="audience-card__title">CA / CFA / MBA Aspirants</h3>
-          <p class="audience-card__text">Individuals seeking practical modelling and valuation skills alongside their professional credentials. The IBCP complements theoretical qualifications with hands-on deal experience.</p>
+          <p class="audience-card__text">Individuals seeking practical modelling and valuation skills alongside their professional credentials with either the <strong>3 Months Regular</strong> or <strong>6 Months Weekend</strong> track.</p>
         </div>
       </div>
     </div>
@@ -253,14 +253,18 @@ include 'header.php';
   <!-- ======== SECTION 7 — PROGRAM FORMAT ======== -->
   <section class="section section--sm" id="format">
     <div class="container fade-in">
-      <div class="format-strip">
+      <div class="format-strip" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="format-strip__item">
+          <div class="format-strip__label">Duration</div>
+          <div class="format-strip__value">3 &amp; 6 Months</div>
+        </div>
+        <div class="format-strip__item">
+          <div class="format-strip__label">Batches</div>
+          <div class="format-strip__value">Regular &amp; Weekend</div>
+        </div>
         <div class="format-strip__item">
           <div class="format-strip__label">Format</div>
           <div class="format-strip__value">Live + Recorded</div>
-        </div>
-        <div class="format-strip__item">
-          <div class="format-strip__label">Level</div>
-          <div class="format-strip__value">Beginner → Advanced</div>
         </div>
         <div class="format-strip__item">
           <div class="format-strip__label">Certification</div>

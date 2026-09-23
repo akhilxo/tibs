@@ -22,7 +22,7 @@ include 'header.php';
       <div class="hero__content" style="max-width:780px;">
         <p class="label label--gold">Get in Touch</p>
         <h1 class="display-md hero__title">Take the Next Step Towards a Career in <span class="text-gold">Investment Banking</span></h1>
-        <p class="hero__subtitle">Interested in our investment banking course in Kochi, Kerala? Enquire about the next IBCP cohort and take the first step towards a career in banking.</p>
+        <p class="hero__subtitle">Interested in our investment banking course ? Enquire about the next IBCP cohort and take the first step towards a career in banking.</p>
       </div>
     </div>
   </section>
@@ -38,10 +38,18 @@ include 'header.php';
             <div style="margin-bottom:var(--space-xl);">
               <p class="label label--gold">Enquiry Form</p>
               <h2 class="heading-md mt-sm">Send Us Your Enquiry</h2>
-              <p class="body-sm mt-sm">Fill in your details below to enquire about investment banking course fees in Kochi, syllabus, and upcoming cohort dates.</p>
+              <p class="body-sm mt-sm">Fill in your details below to enquire about investment banking course fees, syllabus, and upcoming cohort dates.</p>
             </div>
 
-            <form id="enquiry-form">
+            <div class="form-error-alert" id="form-error" style="display:none;" role="alert"></div>
+
+            <form id="enquiry-form" action="<?= $b ?>/send_enquiry" method="POST">
+              <!-- Honeypot anti-spam (hidden from users) -->
+              <div style="display:none !important;" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
               <div class="form-group">
                 <label for="full-name" class="form-label">Full Name <span style="color:var(--primary);">*</span></label>
                 <input type="text" id="full-name" name="full-name" class="form-input" placeholder="Enter your full name" required>
@@ -55,8 +63,17 @@ include 'header.php';
                 <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" required>
               </div>
               <div class="form-group">
+                <label for="course" class="form-label">Program &amp; Batch Track <span style="color:var(--primary);">*</span></label>
+                <select id="course" name="course" class="form-select" required>
+                  <option value="" disabled selected>Select course format...</option>
+                  <option value="ibcp-regular">Flagship IBCP — 3 Months Regular (Weekday Batch)</option>
+                  <option value="ibcp-weekend">IBCP — 6 Months Weekend (Saturday &amp; Sunday Batch)</option>
+                  <option value="undecided">General Enquiry / Need Guidance</option>
+                </select>
+              </div>
+              <div class="form-group">
                 <label for="message" class="form-label">Message <span style="color:var(--primary);">*</span></label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you'd like to know about the IBCP..." required></textarea>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your background or questions about the course..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-lg w-full" id="submit-btn">
                 <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
