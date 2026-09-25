@@ -2228,6 +2228,7 @@ h6 {
 
   .program-listing-card__content {
     padding: var(--space-xl);
+    padding-top: 50px;
   }
 
   .program-listing-card__sidebar {
